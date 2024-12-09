@@ -1,0 +1,359 @@
+.display {
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    /*background-image: url("../source/goblin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;*/
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+/* heder section --------------------------------------------------------------------------------------------------------- */
+.header {
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    width: 99%;
+    height: 58px;
+    padding: 0;
+    margin: 0 0.5%;
+
+    color: black;
+    font-size: 25px;
+    font-weight: 300;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 8px;
+}
+
+.firstheader {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "jaro", san-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    flex: 1;
+    align-items: center;
+    margin: 2% 4%;
+
+    transition: ease 1s;
+}
+
+.title:hover {
+    font-size: 26px;
+}
+
+/* responsive menu --------------------------------------------------------------------------------------- */
+.fixmenu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    margin-right: 5%;
+    padding: 1% 0% 0 0;
+
+    background-color: rgba(49, 79, 4, 0.486);
+
+    width: 20%;
+    overflow: hidden;
+    transition: ease 1s;
+
+    font-size: 20px;
+}
+.smenu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 4%;
+    width: 100%;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+li:hover {
+    transform: translateX(-10px);
+}
+
+
+/* first menu ----------------------------------------------------------------------------------------------- */
+.menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    height: 60%;
+    margin: 0 2%;
+    padding: 0;
+
+    font-family: "Parkinsans", san-serif;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.menuicon {
+    display: none;
+    visibility: hidden;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 3%; 
+    height: 70%;   
+    font-size: 15px;
+    font-weight: 500;
+    
+    transition: ease;
+    transition-duration: 0.2S;
+}
+
+.link:first-child {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.link:hover {
+    border: none;
+
+    border-bottom: 2px solid cornflowerblue;
+}
+
+
+/* main section -------------------------------------------------------------------------------------------- */
+.main {
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+
+    margin: 4% 10%;
+    margin-top: 8%;
+    padding: 0;
+
+    color: black;
+    font-family: "Parkinsans", san-serif;
+
+    cursor: default;
+}
+
+.info {
+    width: 45%;
+    flex-direction: column;
+}
+
+.pic.active {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 0;
+}
+
+.pic {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    width: 55%;
+
+    transition: 0.6s ease-in;
+    transform: translateX(-1000px);
+    opacity: 0;
+}
+
+.mkimg {
+    width: 330px;
+    height: 380px;
+
+    border-radius: 78% 22% 33% 67% / 42% 74% 26% 58% ;
+}
+
+.icon {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 9% 4% 0 4%;
+
+    color: black;
+    font-size: 25px;
+}
+
+i {
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    transition: ease-in;    
+    transition-duration: 0.4s;
+}
+
+i:hover {
+    color: cornflowerblue;
+}
+
+i:first-child:hover {
+    transform: rotate(270deg);
+}
+
+i:nth-child(4):hover {
+    transform:translateX(15px) rotate(75deg);
+}
+
+
+/* detail section ------------------------------------------------------------------------------- */
+
+.detail {
+    margin: 0;
+    margin-left: 3%;
+}
+
+
+.text {
+    font-size: 36px;
+    font-weight: bolder;
+    margin: 2% 30% 4% 0;
+}
+
+span {
+    color: cornflowerblue;
+}
+
+button {
+    padding: 1% 4%;
+
+    border-radius: 8px;
+    border: 1.5px solid white;
+
+    color: white;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: all 0.8s;
+}
+
+.fbtn {
+    flex-direction: row;
+    border: none;
+
+    background-color: cornflowerblue;
+}
+
+.fbtn:hover {
+    transform: translateY(-8px);
+
+    /*background-color: transparent;
+    border: 1.5px solid white;*/
+
+    font-weight: 500;
+}
+
+.wathc {
+    margin: 0;
+}
+
+
+/* responsive section ------------------------------------------------------------------------------- */
+
+@media all and (max-width: 800px) {
+    .header {
+        padding: 0;
+    }
+
+    .title {
+        flex: 1;
+    }
+
+    .menu {
+        flex: 0.1;
+        justify-content: end;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .menuicon {
+        display: flex;
+        visibility: visible;
+        font-size: 30px;
+    }
+
+    .bar {
+        display: none;
+        visibility: hidden;
+    }
+
+    .link {
+        margin: 0 3%;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: start;
+
+        margin: 2%;
+    }
+
+    .icon {
+        flex-direction: row;
+        margin: 2%;
+    }
+
+    i {
+        margin: 5%;
+    }
+    .detail {
+        margin: 2%;
+    }
+
+    .goblin {
+        font-size: 90px;
+    }
+
+    .play {
+        font-size: 18px;
+    }
+
+    .wathc {
+        display: none;
+        visibility: hidden;
+    }
+}
